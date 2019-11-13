@@ -17,8 +17,8 @@ const Home = ()=>{
               </p>
             </a>
           </Link>
-
-          <Link href="/cse">
+          {/* will not be pre-fetched */}
+          <Link href="/cse" prefetch={ false }>
             <a className="card">
               <h3>Contentstack</h3>
               <p> Finally, A Modern Content Management System</p>
