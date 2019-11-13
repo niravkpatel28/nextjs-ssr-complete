@@ -152,6 +152,57 @@ const Navigation = () => {
 
 /***/ }),
 
+/***/ "./components/Timer.js":
+/*!*****************************!*\
+  !*** ./components/Timer.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/home/nirav/Training and Development Cell/Web Development/React/10-ServerSide-Rendering/static-pages/components/Timer.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+//functional component to render timer 
+
+
+function Timer() {
+  const {
+    0: seconds,
+    1: setSeconds
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    console.log('useEffect called', seconds);
+    let timerId = setInterval(() => {
+      return setSeconds(seconds => seconds + 1);
+    }, 1000);
+    console.log('Timer Set (timer id)', timerId);
+    return function cleanUp() {
+      console.log('Timer Cleared (timer id)', timerId);
+      clearInterval(timerId);
+    };
+  });
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, " Minutes : Seconds "), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, " ", Math.floor(seconds / 60), " : ", seconds % 60));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Timer);
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/map.js":
 /*!************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/map.js ***!
@@ -1909,35 +1960,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Navigation */ "./components/Navigation.js");
+/* harmony import */ var _components_Timer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Timer */ "./components/Timer.js");
 var _jsxFileName = "/home/nirav/Training and Development Cell/Web Development/React/10-ServerSide-Rendering/static-pages/pages/raweng.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 //component for RawEng 
 
 
+
 const RawEng = () => {
   return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: undefined
-  }, __jsx(_components_Navigation__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: undefined
-  }), __jsx("h2", {
+  }, __jsx(_components_Navigation__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: undefined
-  }, " Raw Engineering Home Page "), __jsx("p", {
+  }), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
+    },
+    __self: undefined
+  }, " Raw Engineering Home Page "), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
     },
     __self: undefined
   }, "Raw Engineering\u2019s digital solutions and services have been trusted for more than 11 years by the world\u2019s Most Innovative Startups, leading Fortune 500 companies, Sports & Events companies and Governments to provide a new generation of Real-Time, Engaging Experiences and Network DevOps.."), __jsx("img", {
@@ -1947,7 +2000,13 @@ const RawEng = () => {
     width: "100px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 17
+    },
+    __self: undefined
+  }), __jsx(_components_Timer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
     },
     __self: undefined
   }));

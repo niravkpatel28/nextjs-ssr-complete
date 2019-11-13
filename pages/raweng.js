@@ -1,6 +1,6 @@
 //component for RawEng 
 import Navigation from '../components/Navigation'
-
+import Timer from '../components/Timer';
 const RawEng =()=>{
 
     return (
@@ -17,6 +17,7 @@ const RawEng =()=>{
         <img src='/RawLogo.png' alt="Raw Engineering Logo" 
             height="100px"
             width="100px" />
+        <Timer/>
       </div>
     );
 }
