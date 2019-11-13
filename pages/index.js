@@ -18,7 +18,7 @@ const Home = ()=>{
             </a>
           </Link>
 
-          <Link href="/cse" >
+          <Link href="/cse">
             <a className="card">
               <h3>Contentstack</h3>
               <p> Finally, A Modern Content Management System</p>
