@@ -4,7 +4,10 @@
   "description": "Create and serve static pages using Next Js",
   "main": "index.js",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "build" : "next build",
+    "export" : "next export",
+    "deploy": "cd out && now "
   },
   "keywords": [
     "Server",
